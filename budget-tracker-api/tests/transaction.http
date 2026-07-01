@@ -1,0 +1,31 @@
+### GET ALL TRANSACTIONS
+GET http://127.0.0.1:8000/api/transaction
+
+### CREATE TRANSACTION
+POST http://127.0.0.1:8000/api/transaction
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Starbucks Coffee",`
+    "amount": 180.00,
+    "type": "expense",
+    "category": "Foods & Drinks",
+    "transaction_date": "2026-06-30"
+}
+
+### UPDATE TRANSACTIONS
+PUT http://127.0.0.1:8000/api/transaction/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Starbucks Coffee",
+    "amount": 150.00,
+    "type": "expense",
+    "category": "Foods & Drinks",
+    "transaction_date": "2026-06-30"
+}
+
+### DELETE TRANSACTION
+DELETE http://127.0.0.1:8000/api/transaction/1
